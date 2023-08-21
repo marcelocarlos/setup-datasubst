@@ -1,0 +1,26 @@
+name: Demo
+
+on:
+  pull_request:
+  push:
+
+concurrency:
+  group: '${{ github.workflow }}-${{ github.head_ref || github.ref }}'
+  cancel-in-progress: true
+
+jobs:
+  example:
+    name: Example
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+
+    steps:
+      - name: Setup datasubst
+        uses: marcelocarlos/setup-datasubst@main
+        with:
+          version: v0.7.0
+
+      - name: Run databsubst
+        run: datasubst --version

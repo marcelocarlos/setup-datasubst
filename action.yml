@@ -1,0 +1,14 @@
+---
+name: Setup datasubst
+author: Marcelo Carlos <contact@marcelocarlos.com>
+description: Creates a check run on a commit
+
+inputs:
+  version:
+    description: Version
+    required: true
+    default: 'v0.7.0'
+
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
