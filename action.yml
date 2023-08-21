@@ -1,7 +1,7 @@
 ---
 name: Setup datasubst
 author: Marcelo Carlos <contact@marcelocarlos.com>
-description: Creates a check run on a commit
+description: Set up datasubst in your GitHub Actions Workflow
 
 inputs:
   version:
