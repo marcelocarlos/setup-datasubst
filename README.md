@@ -14,7 +14,7 @@ jobs:
 
     steps:
       - name: Setup datasubst
-        uses: marcelocarlos/setup-datasubst@main
+        uses: marcelocarlos/setup-datasubst@v1
         with:
           version: v0.7.0
 
